@@ -8,10 +8,10 @@ export default function App() {
     <div className="container">
       <h1>AI Frontend</h1>
       <nav className="tabs">
-        <button onClick={() => setTab('ask')}>Ask</button>
-        <button onClick={() => setTab('analyze')}>Analyze</button>
-        <button onClick={() => setTab('upload')}>Upload</button>
-        <button onClick={() => setTab('analytics')}>Analytics (SSE)</button>
+        <button className={`tab ${tab === 'ask' ? 'active' : ''}`} onClick={() => setTab('ask')}>Ask</button>
+        <button className={`tab ${tab === 'analyze' ? 'active' : ''}`} onClick={() => setTab('analyze')}>Analyze</button>
+        <button className={`tab ${tab === 'upload' ? 'active' : ''}`} onClick={() => setTab('upload')}>Upload</button>
+        <button className={`tab ${tab === 'analytics' ? 'active' : ''}`} onClick={() => setTab('analytics')}>Analytics (SSE)</button>
       </nav>
       <main>
         {tab === 'ask' && <AskTab />}
